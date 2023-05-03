@@ -1,4 +1,4 @@
-const logger = require('../../../utils/Logger');
+const logger = require('../../../utils/logger');
 const mariaDB = require('../../../database/mariadb');
 
 module.exports = {

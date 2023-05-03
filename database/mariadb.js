@@ -1,5 +1,5 @@
 const maria = require('mysql2/promise');
-const logger = require('../utils/Logger');
+const logger = require('../utils/logger');
 const dbUser = require('./dbUser');
 const poolMaria = maria.createPool(dbUser.mariaMyLoa);
 

@@ -1,5 +1,5 @@
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-const logger = require('../../utils/Logger');
+const logger = require('../../utils/logger');
 const keyManager = require('./lostarkAPIKeyManager');
 
 /**
