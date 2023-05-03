@@ -1,5 +1,5 @@
 const logger = require('../../../utils/Logger');
-const MemoryCache = require('../../../utils/MemoryCache');
+const MemoryCache = require('../../../utils/memoryCache');
 const lostarkAPI = require('../../../lostarkAPI/lostarkAPI');
 
 class NewsCache extends MemoryCache {

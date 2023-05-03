@@ -1,5 +1,5 @@
 const logger = require('../../../utils/Logger');
-const MemoryCache = require('../../../utils/MemoryCache');
+const MemoryCache = require('../../../utils/memoryCache');
 const utils = require('../../../utils/utils');
 const dbService = require('./dbService');
 

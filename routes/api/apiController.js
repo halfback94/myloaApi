@@ -1,6 +1,5 @@
 const logger = require('../../utils/Logger');
 const utils = require('../../utils/utils');
-const VisiterController = require('./VisitorController')
 
 const armorieService = require('./service/armorieService');
 const gameContentService = require('./service/gameContentService');
@@ -12,49 +11,42 @@ const guildService = require('./service/guildService');
 module.exports = {
     sidebarEvent: async (req, res) => {
         logger.log('info',`api-sidebarEvent`);
-        //VisiterController.insertVisit(req, 'sidebarEvent');
         const jsonArray = await newsService.getEvents();
         res.send(jsonArray);
     },
 
     sidebarNotice: async (req, res) => {
-        //logger.log('info',`api-sidebarNotice`);
-        VisiterController.insertVisit(req, 'sidebarNotice');
+        logger.log('info',`api-sidebarNotice`);
         const jsonArray = await newsService.getNotices(req.body.type);
         res.send(jsonArray);
     },
 
     armoriesCharacter: async (req, res) => {
         logger.log('info',`api-armoriesCharacter`);
-        VisiterController.insertVisit(req, 'armoriesCharacter');
         const json = await armorieService.getCharacterInfo(req.body.characterName);
         res.send(json);
     },
 
     challengeAbyssDungeons: async (req, res) => {
         logger.log('info',`api-challengeAbyssDungeons`);
-        VisiterController.insertVisit(req, 'challengeAbyssDungeons');
         const jsonArray = await gameContentService.getChallengeAbyssDungeons();
         res.send(jsonArray);
     },
 
     challengeGuardianRaids: async (req, res) => {
         logger.log('info',`api-challengeGuardianRaids`);
-        VisiterController.insertVisit(req, 'challengeGuardianRaids');
         const jsonArray = await gameContentService.getChallengeGuardianRaids();
         res.send(jsonArray);
     },
 
     calendarToday: async (req, res) => {
         logger.log('info',`api-calendarToday`);
-        VisiterController.insertVisit(req, 'calendarToday');
         const json = await gameContentService.getCalendarToday();
         res.send(json);
     },
 
     marketOptions: async (req, res) => {
         logger.log('info',`api-marketOptions`);
-        VisiterController.insertVisit(req, 'marketOptions');
         const json = await marketService.marketOptions();
         res.send(json);
     },

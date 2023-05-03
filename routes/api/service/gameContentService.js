@@ -1,6 +1,6 @@
 const logger = require('../../../utils/Logger');
 const utils = require('../../../utils/utils');
-const MemoryCache = require('../../../utils/MemoryCache');
+const MemoryCache = require('../../../utils/memoryCache');
 const dbService = require('./dbService');
 const lostarkAPI = require('../../../lostarkAPI/lostarkAPI');
 
