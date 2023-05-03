@@ -1,6 +1,6 @@
 const https = require('https');
 const app = require('./app');
-const logger = require('./utils/Logger');
+const logger = require('./utils/logger');
 const batchService = require('./batch/batchService');
 const auth = require('./auth/auth');
 
